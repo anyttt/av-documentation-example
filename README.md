@@ -10,11 +10,11 @@ This project demonstrates the concept of auto-generating documentation from Java
 Open the ```docs/index.html``` file in the browser.
 
 ### Included examples
-In ```src/components/Component.vue``:
+In ```src/components/Component.vue```:
 - ```documentedMethod()```
 - ```undocumentedMethod()```
 
-In ```src/utils/utils.js``:
+In ```src/utils/utils.js```:
 - ```documentedFunction()```
 - ```undocumentedFunction()```
 
