@@ -15,30 +15,20 @@
 export default {
   methods: {
     /**
-     * This is the description of the firstMethod
-	 * @name feat-firstMethod
+     * This is the description of the firstExampleFeature
+	 * @author feature
      * @param {Object} someObject
      * @returns {string}
      */
-    firstMethod(someObject) {
+    firstExampleFeature(someObject) {
         return someObject.toString();
 	},
     /**
-     * This is the description of the secondMethod
-	 * @name feat-secondMethod
+     * This is the description of the firstExampleMethod
      * @param {Object} someObject
      * @returns {string}
      */
-    secondMethod(someObject) {
-        return someObject.toString();
-    },
-    /**
-     * This is the description of the thirdMethod
-	 * @name dev-thirdMethod
-     * @param {Object} someObject
-     * @returns {string}
-     */
-    thirdMethod(someObject) {
+    firstExampleMethod(someObject) {
         return someObject.toString();
 	}
   }

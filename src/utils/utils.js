@@ -1,19 +1,18 @@
 /**
- * This is the description of the firstFunction
- * @name feat-firstFunction
+ * This is the description of the secondExampleFeature
+ * @author feature
  * @param {Object} someObject
  * @returns {string}
  */
-const firstFunction = (someObject) => {
+const secondExampleFeature = (someObject) => {
 	return someObject.toString();
 }
 
 /**
- * This is the description of the secondFunction
- * @name dev-secondFunction
+ * This is the description of the secondExampleMethod
  * @param {Object} someObject
  * @returns {string}
  */
-const secondFunction = (someObject) => {
+const secondExampleMethod = (someObject) => {
 	return someObject.toString();
 }

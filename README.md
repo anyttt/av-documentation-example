@@ -4,20 +4,20 @@ This project demonstrates the concept of auto-generating documentation from Java
 
 - [JSDoc](https://jsdoc.app/index.html) comments are used to describe the code.
 - [documentation.js](https://github.com/documentationjs/documentation) is used to automatically generate the documentation.
-- Custom ```@name``` with a prefix (```feat-``` or ```dev-```) is added to the comments to differentiate features and dev documentation.
+- Custom template for the generated documentation: ```documentation-theme``` Comments are filtered according to the value of ```@author```. Only the comments with ```@author feature``` are rendered.
 
 ## View the generated documentation
 Open the ```docs/index.html``` file in the browser.
 
 ### Included examples
 In ```src/components/Component.vue```:
-- ```feat-firstMethod()```
-- ```feat-secondMethod()```
-- ```dev-thirdMethod()```
+- ```firstExampleFeature()```
+- ```firstExampleMethod()```
 
 In ```src/utils/utils.js```:
-- ```feat-firstFunction()```
-- ```dev-secondFunction()```
+- ```secondExampleFeature()```
+- ```secondExampleMethod()```
+
 
 ## Project setup
 ```
@@ -30,9 +30,9 @@ If you want to try generating documentation, install [documentation.js](https://
 $ npm install -g documentation
 ```
 
-Generate html docs for files in src:
+Generate ```html``` docs for files in ```src``` using the custom template in ```documentation-theme```:
 ```
-documentation build src/** -f html -o docs
+documentation build src/** -f html -o docs --theme documentation-theme
 ```
 
 ### Compiles and hot-reloads for development
