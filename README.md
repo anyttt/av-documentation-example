@@ -4,19 +4,19 @@ This project demonstrates the concept of auto-generating documentation from Java
 
 - [JSDoc](https://jsdoc.app/index.html) comments are used to describe the code.
 - [documentation.js](https://github.com/documentationjs/documentation) is used to automatically generate the documentation.
-- ```@ignore``` is added to those JSDoc comments that should be omitted from the documentation.
 
 ## View the generated documentation
 Open the ```docs/index.html``` file in the browser.
 
 ### Included examples
 In ```src/components/Component.vue```:
-- ```documentedMethod()```
-- ```undocumentedMethod()```
+- ```feat-firstMethod()```
+- ```feat-secondDocumentedMethod()```
+- ```dev-thirdMethod()```
 
 In ```src/utils/utils.js```:
-- ```documentedFunction()```
-- ```undocumentedFunction()```
+- ```feat-firstFunction()```
+- ```dev-secondFunction()```
 
 ## Project setup
 ```

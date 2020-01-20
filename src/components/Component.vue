@@ -15,20 +15,30 @@
 export default {
   methods: {
     /**
-     * This is the description of the documentedMethod
+     * This is the description of the firstMethod
+	 * @name feat-firstMethod
      * @param {Object} someObject
      * @returns {string}
      */
-    documentedMethod(someObject) {
+    firstMethod(someObject) {
+        return someObject.toString();
+	},
+    /**
+     * This is the description of the secondMethod
+	 * @name feat-secondMethod
+     * @param {Object} someObject
+     * @returns {string}
+     */
+    secondMethod(someObject) {
         return someObject.toString();
     },
     /**
-     * This is the description of the undocumentedMethod
-     * @ignore
+     * This is the description of the thirdMethod
+	 * @name dev-thirdMethod
      * @param {Object} someObject
      * @returns {string}
      */
-    undocumentedMethod(someObject) {
+    thirdMethod(someObject) {
         return someObject.toString();
 	}
   }
