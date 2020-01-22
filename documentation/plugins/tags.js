@@ -1,8 +1,9 @@
 exports.defineTags = function(dictionary) {
     dictionary.defineTag("feature", {
-        mustNotHaveValue: true,
+        mustHaveValue: true,
         onTagged: function(doclet, tag) {
-            doclet.feature = tag.text;
+			doclet.feature = tag.value;
+			doclet.name = tag.value;
         }
 	});
 };

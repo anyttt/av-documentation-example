@@ -360,17 +360,23 @@ function buildGroupNav (members, title) {
     nav += '<div class="category">';
     if (title) {
         nav += '<h2>' + title + '</h2>';
-    }
+	}
+
+	// Divide Features and Dev namespaces
+	let nonDev = members.namespaces.filter(doclet => doclet.name !== 'Dev');
+	nav += buildMemberNav(nonDev || [], 'Features', seen, linkto);
+	let dev = members.namespaces.filter(doclet => doclet.name === 'Dev');
+	nav += buildMemberNav(dev || [], 'Dev', seen, linkto);
+
     nav += buildMemberNav(members.tutorials || [], 'Tutorials', seenTutorials, linktoTutorial);
     nav += buildMemberNav(members.modules || [], 'Modules', {}, linkto);
     nav += buildMemberNav(members.externals || [], 'Externals', seen, linktoExternal);
-    nav += buildMemberNav(members.namespaces || [], 'Namespaces', seen, linkto);
     nav += buildMemberNav(members.classes || [], 'Classes', seen, linkto);
     nav += buildMemberNav(members.interfaces || [], 'Interfaces', seen, linkto);
     nav += buildMemberNav(members.events || [], 'Events', seen, linkto);
     nav += buildMemberNav(members.mixins || [], 'Mixins', seen, linkto);
     nav += buildMemberNav(members.components || [], 'Components', seen, linkto);
-    
+
     if (members.globals && members.globals.length) {
         globalNav = '';
 

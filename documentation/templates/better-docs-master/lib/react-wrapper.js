@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -19,13 +19,17 @@ require("brace/theme/monokai");
 
 var _componentRenderer = _interopRequireDefault(require("./component-renderer"));
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _objectSpread2(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -59,7 +63,7 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Wrapper).call(this, props));
     window.component = window.component || {};
-    _this.iframeRef = _react["default"].createRef();
+    _this.iframeRef = _react.default.createRef();
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.toggleEditor = _this.toggleEditor.bind(_assertThisInitialized(_this));
     var example = props.example;
@@ -85,7 +89,7 @@ function (_React$Component) {
       script.onload = script.onerror = function () {
         this.remove();
         self.setState(function (state) {
-          return _objectSpread2({}, state, {
+          return _objectSpread({}, state, {
             component: window.component[uniqId] || ''
           });
         });
@@ -111,7 +115,7 @@ function (_React$Component) {
     value: function handleChange(code) {
       this.executeScript(code);
       this.setState(function (state) {
-        return _objectSpread2({}, state, {
+        return _objectSpread({}, state, {
           example: code
         });
       });
@@ -152,7 +156,7 @@ function (_React$Component) {
     value: function toggleEditor(event) {
       event.preventDefault();
       this.setState(function (state) {
-        return _objectSpread2({}, state, {
+        return _objectSpread({}, state, {
           showEditor: !state.showEditor
         });
       });
@@ -166,7 +170,7 @@ function (_React$Component) {
           component = _this$state.component,
           height = _this$state.height,
           showEditor = _this$state.showEditor;
-      return _react["default"].createElement("div", null, _react["default"].createElement(_reactFrameComponent["default"], {
+      return _react.default.createElement("div", null, _react.default.createElement(_reactFrameComponent.default, {
         className: "component-wrapper",
         ref: this.iframeRef,
         style: {
@@ -174,22 +178,22 @@ function (_React$Component) {
           height: height
         },
         onLoad: this.computeHeight()
-      }, _react["default"].createElement("link", {
+      }, _react.default.createElement("link", {
         type: "text/css",
         rel: "stylesheet",
         href: "./build/entry.css"
-      }), _react["default"].createElement(_reactFrameComponent.FrameContextConsumer, null, function (frameContext) {
-        return _react["default"].createElement(_componentRenderer["default"], {
+      }), _react.default.createElement(_reactFrameComponent.FrameContextConsumer, null, function (frameContext) {
+        return _react.default.createElement(_componentRenderer.default, {
           frameContext: frameContext
         }, component);
-      })), _react["default"].createElement("div", {
+      })), _react.default.createElement("div", {
         className: "bd__button"
-      }, _react["default"].createElement("a", {
+      }, _react.default.createElement("a", {
         href: "#",
         onClick: this.toggleEditor
-      }, "Modify Example Code")), showEditor ? _react["default"].createElement("div", {
+      }, "Modify Example Code")), showEditor ? _react.default.createElement("div", {
         className: "field"
-      }, _react["default"].createElement(_reactAce["default"], {
+      }, _react.default.createElement(_reactAce.default, {
         style: {
           width: '100%',
           height: '200px',
@@ -210,10 +214,10 @@ function (_React$Component) {
   }]);
 
   return Wrapper;
-}(_react["default"].Component);
+}(_react.default.Component);
 
 var _default = function _default(props) {
-  return _react["default"].createElement(Wrapper, props);
+  return _react.default.createElement(Wrapper, props);
 };
 
-exports["default"] = _default;
+exports.default = _default;

@@ -14,13 +14,11 @@ var self = this;
         <?js data.rawAttribs.forEach(function(attrib) { ?>
             <span class='tag'><?js= attrib ?></span>
         <?js }); ?>
-    <?js } ?>
+	<?js } else if (data.feature) { ?>
+		<span class='tag'>Feature</span>
+    <?js }; ?>
     <span class="code-name">
-		<?js if (data.feature) { ?>
-			<?js= feature ?>
-		<?js } else { ?>
-    		<?js= name ?>
-		<?js } ?>
+        <?js= name ?>
     </span>
     <?js if (data.optional) { ?>
         <span class='tag'>Optional</span>

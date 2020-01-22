@@ -9,17 +9,17 @@ new Vue({
 	},
 	methods: {
 		/**
-		 * This is the description of the Vue feature.
+		 * This is the description of the first feature
 		 * @memberof ConfirmOrderPage
-		 * @feature This is the title of the Vue feature
-		 * @name Feature
+		 * @feature This is the title of the first feature
 		 */
 		/**
-		 * This is the dev description of the Vue method
+		 * This is the dev description of the first method
+		 * @memberof Dev
 		 * @param {Object} someObject
 		 * @returns {string}
 		 */
-		vueMethod(someObject) {
+		firstMethod(someObject) {
 			return someObject.toString();
 		}
 	},
@@ -27,3 +27,7 @@ new Vue({
 		return createElement('h1', this.title)
 	}
   }).$mount('#app')
+
+//   * @brand AVG
+//   * @carttype in-app
+//   * @locales en_US, pt_BR
