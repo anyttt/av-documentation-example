@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: exampleClass.js</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -51,8 +53,8 @@
             <div class="column is-9-desktop">
                 <div class="content" id="main-content-wrapper">
                     <header class="page-title">
-                        <p>Title</p>
-                        <h1>Home</h1>
+                        <p>Source</p>
+                        <h1>exampleClass.js</h1>
                     </header>
                     
                     
@@ -60,25 +62,44 @@
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Cookie class with Web Storage compatible API
+ * @memberof Dev
+ */
+const CookieStorage = class {
 
+	/**
+	 * Init cookieStorage
+	 */
+	constructor() {
+		let isCookieEnabled = (() => {
+				return false;
+		})();
+	}
 
-    <h3> </h3>
+	/**
+	 * Get length
+	 * @returns {string}
+	 */
+	get length() {
+		return '';
+	}
 
+	/**
+	 * Return message
+	 * @param {String} someString
+	 * @returns {string}
+	 */
+	returnMessage(message = '') {
+		return `Message: ${message}`;
+	}
+};
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+module.exports = CookieStorage;</code></pre>
+        </article>
+    </section>
 
 
 

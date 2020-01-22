@@ -363,9 +363,10 @@ function buildGroupNav (members, title) {
 	}
 
 	// Divide Features and Dev namespaces
-	let nonDev = members.namespaces.filter(doclet => doclet.name !== 'Dev');
+	let regex = RegExp('^Dev(.?)*');
+	let nonDev = members.namespaces.filter(doclet => !regex.test(doclet.longname));
 	nav += buildMemberNav(nonDev || [], 'Features', seen, linkto);
-	let dev = members.namespaces.filter(doclet => doclet.name === 'Dev');
+	let dev = members.namespaces.filter(doclet => regex.test(doclet.longname));
 	nav += buildMemberNav(dev || [], 'Dev', seen, linkto);
 
     nav += buildMemberNav(members.tutorials || [], 'Tutorials', seenTutorials, linktoTutorial);
