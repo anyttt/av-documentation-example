@@ -1,18 +1,14 @@
 /**
- * This is the description of the secondExampleFeature
- * @author feature
- * @param {Object} someObject
- * @returns {string}
+ * This is the description of the js feature.
+ * @memberof ConfirmOrderPage
+ * @feature This is the title of the js feature
+ * @name Feature
  */
-const secondExampleFeature = (someObject) => {
-	return someObject.toString();
-}
-
 /**
- * This is the description of the secondExampleMethod
+ * This is the dev description of the js function.
  * @param {Object} someObject
  * @returns {string}
  */
-const secondExampleMethod = (someObject) => {
+const utilFunction = (someObject) => {
 	return someObject.toString();
 }

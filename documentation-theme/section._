@@ -38,6 +38,7 @@
   <% if (section.version) { %><div>Version: <%- section.version %></div><% }%>
   <% if (section.license) { %><div>License: <%- section.license %></div><% }%>
   <% if (section.author) { %><div>Author: <%- section.author %></div><% }%>
+  <%{ %><div>Feature: <%- section.feature %></div><% }%>
   <% if (section.copyright) { %><div>Copyright: <%= md(section.copyright, true) %></div><% }%>
   <% if (section.since) { %><div>Since: <%- section.since %></div><% }%>
 
