@@ -1,6 +1,5 @@
 /**
  * Cookie class with Web Storage compatible API
- * @memberof Dev
  */
 const CookieStorage = class {
 

@@ -1,44 +1,44 @@
 /**
  * Global
- * @namespace Global
+ * @namespace AVG
+ */
+
+/**
+ * Global
+ * @namespace AVG.Global
  */
 
 /**
  * Empty Cart Page
- * @namespace EmptyCartPage
+ * @namespace AVG.EmptyCartPage
  */
 
  /**
  * Shopping Cart
- * @namespace ShoppingCart
+ * @namespace AVG.ShoppingCart
  */
 
  /**
  * Customer Information
- * @namespace CustomerInformation
+ * @namespace AVG.CustomerInformation
  */
 
  /**
  * Payment Information
- * @namespace PaymentInformation
+ * @namespace AVG.PaymentInformation
  */
 
  /**
  * Confirm Order Page
- * @namespace ConfirmOrderPage
+ * @namespace AVG.ConfirmOrderPage
  */
 
  /**
  * Thank You Page
- * @namespace ThankYouPage
+ * @namespace AVG.ThankYouPage
  */
 
  /**
  * Other Pages
- * @namespace OtherPages
- */
-
-/**
- * Dev
- * @namespace Dev
+ * @namespace AVG.OtherPages
  */

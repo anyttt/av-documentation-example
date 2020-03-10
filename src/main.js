@@ -10,12 +10,11 @@ new Vue({
 	methods: {
 		/**
 		 * This is the description of the first feature
-		 * @memberof ConfirmOrderPage
+		 * @memberof AVG.ConfirmOrderPage
 		 * @feature This is the title of the first feature
 		 */
 		/**
 		 * This is the dev description of the first method
-		 * @memberof Dev
 		 * @param {Object} someObject
 		 * @returns {string}
 		 */
@@ -27,7 +26,3 @@ new Vue({
 		return createElement('h1', this.title)
 	}
   }).$mount('#app')
-
-//   * @brand AVG
-//   * @carttype in-app
-//   * @locales en_US, pt_BR
