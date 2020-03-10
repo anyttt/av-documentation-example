@@ -53,7 +53,7 @@ Get length
 
 
 
-#### returnMessage(someString) 
+#### returnMessage(message, someString) 
 
 Return message
 
@@ -64,7 +64,8 @@ Return message
 
 | Name | Type | Description |  |
 | ---- | ---- | ----------- | -------- |
-| someString | `String`  |  | &nbsp; |
+| message |  |  | &nbsp; |
+| someString | `string`  |  | &nbsp; |
 
 
 

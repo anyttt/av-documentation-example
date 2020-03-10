@@ -23,7 +23,9 @@ const CookieStorage = class {
 
 	/**
 	 * Return message
-	 * @param {String} someString
+	 *
+	 * @param message
+	 * @param {string} someString
 	 * @returns {string}
 	 */
 	returnMessage(message = '') {

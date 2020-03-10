@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "doc": "jsdoc -c documentation/conf.json -t documentation/templates/better-docs-master src/* && doxdox 'src/**/*.js' --layout markdown --output DOCUMENTATION.md"
+    "doc": "jsdoc -c documentation/conf.json -d documentation/docs -t documentation/templates/better-docs-master src/* && doxdox 'src/**/*.js' --layout markdown --output DOCUMENTATION.md"
   },
   "dependencies": {
     "core-js": "^3.4.4",
@@ -20,6 +20,7 @@
     "documentation": "^12.1.4",
     "doxdox": "^3.0.0",
     "eslint": "^5.16.0",
+    "eslint-plugin-jsdoc": "^22.0.0",
     "eslint-plugin-vue": "^5.0.0",
     "github-slugger": "^1.2.1",
     "jsdoc": "^3.6.3",
